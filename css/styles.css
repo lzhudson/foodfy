@@ -1,0 +1,194 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap');
+
+:root {
+  --pink-color: #FBDFDB;
+  --title-color: #111111;
+  --paragraph-color: #000000;
+  --subtitle-color: #777777;
+  --copyright-color: #999999;
+  --footer-color: #EEEEEE;
+  --about-paragraph-color: #444444;
+  --close-modal-color: #999999;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
+.wrapper {
+  max-width: 940px;
+  margin: 0 auto;
+}
+
+header {
+  padding: 30px 0;
+}
+
+nav {
+  display: flex;
+}
+
+.logo {
+  font-size: 30px;
+  letter-spacing: 1px;
+  line-height: 19px;
+}
+
+.menu {
+  list-style: none;
+  display: flex;
+  margin-left: 120px;
+}
+
+.menu-item {
+  margin: 0 10px;
+  font-size: 16px;
+  line-height: 19px;
+  color: var(--title-color);
+  text-decoration: none;
+}
+.menu-item.active {
+  font-weight: bold;
+}
+
+.hero-content {
+  background-color: var(--pink-color);
+  border-radius: 30px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin-top: 35px;
+}
+.hero-info {
+  padding: 30px 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.hero-content h1 {
+  font-size: 32px;
+  color: var(--title-color);
+  margin-left: 60px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+.hero-content p {
+  color: var(--paragraph-color);
+  opacity: 0.7;
+  font-size: 18px;
+  max-width: 320px;
+  margin-left: 60px;
+  line-height: 28px;
+}
+.hero-image {
+  text-align: center;
+  margin-top: 60px;
+}
+
+.best-acess {
+  margin-top: 50px;
+}
+
+.best-acess h3 {
+  font-size: 24px;
+}
+
+.foods {
+  margin: 20px 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 30px 20px;
+}
+.food-image {
+  border-radius: 15px;
+}
+.food-image img {
+  width: 100%;
+  border-radius: 15px;
+}
+.food-content {
+  margin-top: 20px;
+}
+
+.food-name {
+  color: var(--title-color);
+  margin-bottom: 5px;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.food-author {
+  color: var(--subtitle-color);
+  font-size: 14px;
+}
+
+footer {
+  padding: 25px 0;
+  background-color: var(--footer-color);
+  color: var(--copyright-color);
+  text-align: center;
+}
+
+/* === ABOUT === */
+.about {
+  margin: 50px 0;
+}
+.about-title {
+  font-size: 24px;
+  color: var(--title-color);
+  margin: 20px 0;
+}
+.about-content {
+  font-size: 18px;
+  line-height: 28px;
+  color: var(--about-paragraph-color);
+}
+/* === MODAL === */
+.modal-overlay {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  background: rgba(0, 0, 0, 0.8);
+  top: 0;
+  opacity: 0;
+  visibility: hidden;
+}
+.modal-overlay.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.modal {
+  width: 660px;
+  margin: 20vh auto;
+  background: white;
+  border-radius: 16px;
+  text-align: center;
+}
+.modal-image {
+  margin: 10px 0;
+}
+.modal-image img {
+  margin-top: 20px;
+  border-radius: 15px;
+  width: 600px;
+}
+.modal .food-name {
+  font-size: 24px;
+}
+.modal .food-author {
+  font-size: 18px;
+}
+.modal-close {
+  padding: 60px 0 30px 0;
+}
+.modal-close p {
+  font-size: 16px;
+  color: var(--close-modal-color);
+  cursor: pointer;
+}
